@@ -1,0 +1,22 @@
+.section-4{
+  width: 100%;
+  .container{
+    h1{
+      font-size: 2em;
+      @include breakPoints(mobile){
+        font-size: 1.5em;
+      }
+    }
+    .products{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(12em,1fr));
+      gap: 1em;
+      @include breakPoints(mobile){
+        grid-template-columns: repeat(auto-fit,minmax(9em,1fr));
+      }
+      @include breakPoints(mobile-m){
+        grid-template-columns: repeat(auto-fit,minmax(10em,1fr));
+      }
+    }
+  }
+}

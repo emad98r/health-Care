@@ -1,0 +1,131 @@
+.section-2{
+  width: 100%;
+  background-color: var(--white-color);
+  margin-top: 11em;
+  margin-bottom: 5em;
+
+  .container{
+    display: flex;
+    align-items: flex-start;
+    @include breakPoints(mobile){
+      flex-direction: column;
+    }
+    @include breakPoints(small){
+      width: 95%;
+    }
+    .Popular-categories{
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      margin-right: 1em;
+      @include breakPoints(mobile){
+        width: 80%;
+        margin: 0 auto 1em;
+      }
+      @include breakPoints(small){
+        width: 50%;
+      }
+      @include breakPoints(medium){
+        width: 50%;
+      }
+      .small-cont{
+        border: 2px solid var(--light-blue-color);
+        border-radius: 10px;
+        padding: 1em;
+        &:hover{
+          background-color: var(--gray-color);
+        }
+        .time{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 3em;
+          h4{
+            background-color: var(--light-blue-color);
+            color: var(--white-color);
+            font-size: 1.5em;
+            width: 1.9rem;
+            border-radius: 10px;
+            text-align: center;
+            height: max-content;
+            line-height: 1.8;
+          }
+          span{
+            font-size: 1.8em;
+            color: var(--main-color);
+          }
+        }
+        .p-img{
+          position: relative;
+          &::after{
+            content: "-30%";
+            width: 4em;
+            height: 4em;
+            position: absolute;
+            top: -2em;
+            left: 0;
+            background-color: var(--main-color);
+            color: var(--white-color);
+            text-align: center;
+            border-radius: 50%;
+            line-height: 4;
+          }
+          img{
+            width: 100%;
+          border-radius: 10px;
+
+          }
+        }
+        p{
+          text-transform: capitalize;
+          color: var(--main-color);
+          line-height: 1.8;
+        }
+        .price{
+          margin: .5em 0;
+          b{
+            color: var(--main-color);
+            font-size: 1.2em;
+          }
+          del{
+            color: gray;
+          }
+        }
+        .starts{
+          width: 5em;
+          display: block;
+          margin-bottom: 2em;
+        }
+        i{
+          color: var(--light-blue-color);
+          b{
+            display: block;
+            color: var(--main-color);
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+    .Latest-products{
+      width: 83%;
+      display: flex;
+      flex-direction: column;
+      @include breakPoints(mobile){
+        width: 100%;
+      }
+
+      .small-cont{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(12em,1fr));
+        gap: 0.3em;
+        @include breakPoints (mobile){
+          grid-template-columns: repeat(auto-fit,minmax(8em,1fr));
+        }
+        @include breakPoints (small){
+          grid-template-columns: repeat(auto-fit,minmax(10em,1fr));
+        }
+      }
+    }
+  }
+}
